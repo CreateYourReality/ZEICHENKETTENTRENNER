@@ -87,6 +87,7 @@ form{
     border-right: 5px double black;
     padding: 2vw;
     background-color: #FFD166;
+    border-radius: 50px 50px 0 0;
 
 }
 
@@ -97,6 +98,7 @@ section{
     border-left: 5px double black;
     border-right: 5px double black;
     padding: 2vw;
+    border-radius: 0 0 50px 50px;
 }
 
 form{
