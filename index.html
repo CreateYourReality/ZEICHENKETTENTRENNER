@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>ZEICHENKETTENTRENNUNGSMASCHINE</title>
+</head>
+<body>
+
+    <main>
+        <form onsubmit="cutME();return false;">
+            <h1>ZEICHENKETTENTRENNUNGSMASCHINE</h1>
+            <label for="input">Zu trennende Zeichenkette:</label>
+            <input type="text" id="input" name="input" value="Eine Maschine ist ein technisches Gebilde mit durch ein Antriebssystem bewegten Teilen">
+            <label for="position">Zeichenkette für die Trennungsposition:</label>
+            <input type="text" name="position" id="position">
+
+            <input type="radio" id="dT" name="cutPos" value="davor trennen">
+            <label for="dT">davor trennen</label>
+            <input type="radio" id="daT" name="cutPos" value="danach trennen">
+            <label for="daT">danach trennen</label>
+            
+            <input type="submit" value="Daten absenden">
+            <h3>AKTUELLE OPTION</h3>
+        </form>
+
+        <section>
+            <article>
+                <h2>Ausgabe</h2>
+                <h4>Vorderer Teil</h4>
+                <p class="outputVorne"></p>
+            </article>
+
+            <article>
+                <h4>Hinterer Teil</h4>
+                <p class="outputHinten"></p>
+            </article>
+        </section>
+
+    </main>
+
+
+    <script type="text/javascript" src="./assets/main.js"></script>
+</body>
+</html>
