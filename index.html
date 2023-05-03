@@ -8,40 +8,67 @@
     <title>ZEICHENKETTENTRENNUNGSMASCHINE</title>
 </head>
 <body>
+ 
+        
+
 
     <main>
-        <form onsubmit="cutME();return false;">
+        
+        <form name="formToSubmit" onsubmit="cutME();return false;">
+
+            <div id="leverControl" class="lever-control">
+                <div class="lever">
+                  <div class="knob"></div>
+                  <div class="stick"></div>
+                </div>
+                <div class="lever-base">
+                  <div class="pivot"></div>
+                  <div class="base"></div>
+                </div>
+              </div>
+
             <h1>ZEICHENKETTENTRENNUNGSMASCHINE</h1>
             <label for="input">Zu trennende Zeichenkette:</label>
             <input type="text" id="input" name="input" value="Eine Maschine ist ein technisches Gebilde mit durch ein Antriebssystem bewegten Teilen">
             <label for="position">Zeichenkette für die Trennungsposition:</label>
             <input type="text" name="position" id="position">
 
-            <input type="radio" id="dT" name="cutPos" value="davor trennen">
-            <label for="dT">davor trennen</label>
-            <input type="radio" id="daT" name="cutPos" value="danach trennen">
-            <label for="daT">danach trennen</label>
-            
-            <input type="submit" value="Daten absenden">
-            <h3>AKTUELLE OPTION</h3>
+            <div>
+
+
+                <label for="dT">
+                    <input onchange="radioText()" type="radio" id="dT" name="cutPos" value="davor trennen">DAVOR TRENNEN
+                </label>
+                <h3>DANACH</h3>
+
+                <label for="daT" >
+                    <input onchange="radioText()" checked type="radio" id="daT" name="cutPos" value="danach trennen">DANACH TRENNEN
+                </label>
+            </div>
+
+            <input id="subBTN" type="submit" value="Daten absenden">
         </form>
 
+
         <section>
-            <article>
-                <h2>Ausgabe</h2>
-                <h4>Vorderer Teil</h4>
-                <p class="outputVorne"></p>
-            </article>
+            <h2>Ausgabe</h2>
 
             <article>
-                <h4>Hinterer Teil</h4>
-                <p class="outputHinten"></p>
+                <div>
+                    <h4>Vorderer Teil</h4>
+                    <p class="outputVorne"></p>
+                </div>
+                <div>
+                    <h4>Hinterer Teil</h4>
+                    <p class="outputHinten"></p>
+                </div>
             </article>
         </section>
 
     </main>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script type="text/javascript" src="./assets/main.js"></script>
+
 </body>
 </html>

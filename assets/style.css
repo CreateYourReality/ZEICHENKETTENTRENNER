@@ -6,6 +6,31 @@
 
 html{
     font-size: 62.5%;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: clamp(1rem,2vw,3.5rem);
+    text-align: center;
+}
+
+h2{
+    font-size: clamp(3rem,3vw,4rem);
+    text-align: center;
+}
+
+h3{
+    font-size: clamp(.5rem, 1.4vw, 2.5rem);
+}
+
+h4{
+    font-size: clamp(2rem, 2vw, 3rem);
+}
+
+
+p{
+    font-size: clamp(1rem,1vw,1.7rem);
 }
 
 main{
@@ -15,22 +40,125 @@ main{
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
+    padding: 3vw;
+}
+
+
+
+form div{
+    display: flex;
+    flex-direction: column;
 }
 
 input{
-    display: block;
+    margin: .3vw 0;
+
 }
 
 input[type="text"]{
-    min-width: 60vw;
+    width: 50vw;
+    display: block;
+    height: 2vw;
+    text-align: center;
 }
 
-h2{
-    align-self: baseline;
-}
-
-section{
-    min-width: 70vw;
+article{
+    min-width: 50vw;
     display: flex;
     justify-content: space-between;
 }
+
+article > div{
+    min-width: 50%;
+}
+
+article div:nth-of-type(2){
+    text-align: right;
+}
+
+
+
+
+
+
+form{
+    border-top: 5px double black;
+    border-left: 5px double black;
+    border-right: 5px double black;
+    padding: 2vw;
+    background-color: #FFD166;
+
+}
+
+section{
+    background-color: #d6bfff;
+    min-height: 30vh;
+    border-bottom: 5px double black;
+    border-left: 5px double black;
+    border-right: 5px double black;
+    padding: 2vw;
+}
+
+form{
+    position: relative;
+}
+  
+
+#subBTN{
+    display: none;
+}
+
+  
+  /* Lever styles */
+  .lever-control {
+    position: absolute;
+    width: 54px;
+    padding-top: 42px;
+    cursor: pointer;
+    display: flex;
+    left: 48%;
+    transform: translateX(-50%);
+    top:-10vh;
+    transform: scale(2);
+  }
+  
+  .lever {
+    position: absolute;
+    width: 10px;
+    left: 22px;
+    top: 0;
+    transform: rotate(30deg);
+    transform-origin: 50% 100%;
+  }
+  
+  .knob {
+    background-color: #FAB700;
+    width: 10px;
+    height: 18px;
+  }
+  
+  .stick {
+    width: 5px;
+    height: 32px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  .lever-base {
+    position: relative;
+    width: 54px;
+  }
+  
+  .pivot {
+    width: 24px;
+    height: 12px;
+    border-radius: 50px 50px 0 0;
+    background-color: #D0D2D3;
+    margin: 0 auto;
+  }
+  
+  .base {
+    width: 54px;
+    height: 3px;
+    background-color: #B3B3B3;
+  }

@@ -3,13 +3,16 @@
 const inputFeld = document.querySelector("#input");
 const trennungsPosFeld = document.querySelector("#position");
 const radioBtnDavor = document.querySelector("#dT");
-const radioBtnDanach = document.querySelector("#daT");
 const outputVorne = document.querySelector(".outputVorne");
 const outputHinten = document.querySelector(".outputHinten");
 const aktuelleOption = document.querySelector("h3");
 
+const btn = document.querySelector("#subBTN");
+
 let index = 0;
 let textToTrim = "";
+
+const radioText = () => radioBtnDavor.checked ? aktuelleOption.innerHTML = "DAVOR" : aktuelleOption.innerHTML = "DANACH";  
 
 
 const cutME = () =>{
@@ -48,3 +51,18 @@ const getPOS = (indexPos)=> {
         getPOS(index);
     }
 }
+
+
+
+//### 
+
+let leverControl = document.getElementById("leverControl");
+
+leverControl.addEventListener('click', () => {
+  gsap.fromTo(".lever", 
+    { rotate: -80}, 
+    { rotate: 30, duration:"1", repeat: 0, ease: "Sine.out"}
+    
+  );
+  btn.click();
+}, { once: false });
