@@ -9,11 +9,7 @@
 </head>
 <body>
  
-        
-
-
     <main>
-        
         <form name="formToSubmit" onsubmit="cutME();return false;">
 
             <div id="leverControl" class="lever-control">
@@ -33,16 +29,16 @@
             <label for="position">Zeichenkette für die Trennungsposition:</label>
             <input type="text" name="position" id="position">
 
-            <div>
+            <div class="radioDiv">
 
 
                 <label for="dT">
-                    <input onchange="radioText()" type="radio" id="dT" name="cutPos" value="davor trennen">DAVOR TRENNEN
+                    <input onchange="radioText()" type="radio" id="dT" name="cutPos" value="davor trennen"> DAVOR TRENNEN
                 </label>
               <!--  <h3>DANACH</h3>-->
 
                 <label for="daT" >
-                    <input onchange="radioText()" checked type="radio" id="daT" name="cutPos" value="danach trennen">DANACH TRENNEN
+                    <input onchange="radioText()" checked type="radio" id="daT" name="cutPos" value="danach trennen"> DANACH TRENNEN
                 </label>
             </div>
 

@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --yellow:#FFD166;
+    --black:#000;
+    --purple:#d6bfff;
+    --darkPurple: #9f6bf8;
+    --grey:grey;
+}
+
 html{
     font-size: 62.5%;
-    background-color: grey;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--grey);
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -44,16 +52,40 @@ main{
     padding: 3vw;
 }
 
+form{
+    border-top: 5px groove var(--black);
+    border-left: 5px groove var(--black);
+    border-right: 5px groove var(--black);
+    background-color: var(--yellow);
+    border-radius: 50px 50px 0 0;
+    padding: 2vw;
+    position: relative;
+
+}
+
+section{
+    background-color: var(--purple);
+    min-height: 30vh;
+    border-bottom: 5px groove var(--black);
+    border-left: 5px groove var(--black);
+    border-right: 5px groove var(--black);
+    padding: 2vw;
+    border-radius: 0 0 50px 50px;
+}
 
 
-form div{
-    display: flex;
-    flex-direction: column;
+.radioDiv{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 input{
     margin: .3vw 0;
+}
 
+label{
+    font-size: clamp(1rem,1vw,1.5rem);
 }
 
 input[type="text"]{
@@ -61,7 +93,24 @@ input[type="text"]{
     display: block;
     height: 2vw;
     text-align: center;
+    font-weight: 900;
+    border-style: none;
+    font-size: clamp(1rem,1vw,2rem);
 }
+
+input[type="radio"]{
+    transform: scale(3);
+    margin-right: 1vw;
+    margin-top: 1vw;
+    accent-color: var(--purple);
+}
+
+input[type="radio"]{
+    accent-color: var(--darkPurple);
+}
+
+
+
 
 article{
     min-width: 50vw;
@@ -78,35 +127,7 @@ article div:nth-of-type(2){
 }
 
 
-
-
-
-
-form{
-    border-top: 5px groove black;
-    border-left: 5px groove black;
-    border-right: 5px groove black;
-    padding: 2vw;
-    background-color: #FFD166;
-    border-radius: 50px 50px 0 0;
-
-}
-
-section{
-    background-color: #d6bfff;
-    min-height: 30vh;
-    border-bottom: 5px groove black;
-    border-left: 5px groove black;
-    border-right: 5px groove black;
-    padding: 2vw;
-    border-radius: 0 0 50px 50px;
-}
-
-form{
-    position: relative;
-}
-  
-
+/* #### NUR HEBEL SICHTBAR #### */
 #subBTN{
     display: none;
 }
@@ -166,4 +187,11 @@ form{
     width: 54px;
     height: 3px;
     background-color: #B3B3B3;
+  }
+
+
+  @media only screen and (max-width:1200px) {
+    input[type="radio"]{
+        transform: scale(2);
+    }
   }
