@@ -5,14 +5,14 @@ const trennungsPosFeld = document.querySelector("#position");
 const radioBtnDavor = document.querySelector("#dT");
 const outputVorne = document.querySelector(".outputVorne");
 const outputHinten = document.querySelector(".outputHinten");
-const aktuelleOption = document.querySelector("h3");
+const aktuelleOption = document.querySelector("h2");
 
 const btn = document.querySelector("#subBTN");
 
 let index = 0;
 let textToTrim = "";
 
-const radioText = () => radioBtnDavor.checked ? aktuelleOption.innerHTML = "DAVOR" : aktuelleOption.innerHTML = "DANACH";  
+const radioText = () => radioBtnDavor.checked ? aktuelleOption.innerHTML = "AUSGABE MIT WORT DAVOR" : aktuelleOption.innerHTML = "AUSGABE MIT WORT DANACH";  
 
 
 const cutME = () =>{
